@@ -1,0 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 70px; /* Prevent content from being hidden */
+}
+
+section {
+  height: 100vh; /* Just for demonstration */
+  padding: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  flex: 1; /* Pushes content to the left */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.home-content,
+.hero-image {
+  flex: 1; /* Ensures equal width */
+  min-width: 0; /* Prevents content from forcing extra space */
+  padding: 20px;
+  overflow: hidden; /* Clips the corners properly */
+}
+
+.hero-image img {
+    display: block;
+    width: 100%; /* Ensures the image fills the width of its container */
+    height: auto; /* Fixed height */
+    max-height: 400px;
+    object-fit: cover; /* Ensures the whole image is visible without distortion */
+    border-radius: 50px;
+  }
+
+.mainhead{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.mainhead .subhead{
+    color: #5e3bee;
+}
+
+.brief-content{
+    line-height: 1.4rem;
+}
+
+.git_btn_container{
+    padding-block: 20px;
+}
+  
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  padding: 15px 20px;
+  transition: top 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: none;
+  gap: 20px;
+
+  @media (width >= 48rem /* 768px */) {
+    flex: 2; /* Centers the links */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.nav a:hover {
+    color: #5E3BEE; /* Change color on hover */
+  }
+  
+  /* Style the active link */
+  .nav a:focus,
+  .nav a:active {
+    color: #5E3BEE;
+    font-weight: bold;
+  }
+
+.right-button-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+}
+
+.action-btn {
+  text-align: center;
+  background-color: white; /* Base color */
+  color: #5e3bee;
+  border: 1px solid #4a2dbf; /* Thin darker border */
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 6px; /* Smooth rounded corners */
+  position: relative;
+  transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+.action-btn:hover {
+  background-color: white;
+  border-color: #8b72ff; /* Brighter border */
+  box-shadow: 0 0 12px #8b72ff, 0 0 20px rgba(94, 59, 238, 0.7); /* Glowing border effect */
+}
+
+.action-btn-prime{
+    text-align: center;
+    background-color: #5e3bee; /* Base color */
+    color: white;
+    border: 1px solid #5e3bee; /* Thin darker border */
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    width: auto;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 2px; /* Smooth rounded corners */
+    position: relative;
+    transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.action-btn-prime:hover {
+    background-color: #4621de;
+    border-color: #8b72ff; /* Brighter border */
+  }
